@@ -528,7 +528,7 @@ static NSString *const SeaURLRegex = @"((http[s]{0,1}|ftp)://[a-zA-Z0-9\\.\\-]+\
             ///行末尾，但是末尾部分无法显示一个字，要占满
             if(i != count - 1 && innerRange.location + innerRange.length == lineRange.length + lineRange.location)
             {
-                endX = CGRectGetMaxX(self.textBounds);
+                endX = CGRectGetMaxX(self.textBounds) - self.textInsets.right;
             }
             
             CGPoint lineOrigin = lineOrigins[i];
